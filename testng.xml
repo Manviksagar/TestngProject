@@ -10,8 +10,9 @@
   	<parameter name="browser" value ="Chrome" ></parameter>
   
     <classes>
-      <class name="com.sag.pos.EomTest"/>
-      <class name="com.sag.pos.PostTest"/>
+      <!-- <class name="com.sag.pos.EomTest"/> -->
+      <!-- <class name="com.sag.pos.PostTest"/> -->
+      <class name="com.sag.dataprovider.TestDataProvider"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
