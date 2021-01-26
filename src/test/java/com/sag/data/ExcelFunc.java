@@ -13,7 +13,7 @@ public class ExcelFunc {
 
 	public ExcelFunc() throws IOException {
 
-	 workbook = new XSSFWorkbook("C:\\Users\\Va185060\\eclipse-workspace\\CompleteTest\\src\\test\\resources\\ExcelData\\Testdata.xlsx");
+	 workbook = new XSSFWorkbook(System.getProperty("user.dir")+"\\src\\test\\resources\\ExcelData\\Testdata.xlsx");
 	sheet=workbook.getSheet("Sheet1");
 	}
 	public int rowCount() {

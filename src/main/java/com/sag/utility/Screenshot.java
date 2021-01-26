@@ -17,7 +17,7 @@ public class Screenshot {
 		
 	
 		File scrShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrShot, new File("C:\\Users\\Va185060\\eclipse-workspace\\CompleteTest\\src\\test\\resources\\screenshots\\" +tc_name +".png"));
+		FileUtils.copyFile(scrShot, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\screenshots\\" +tc_name +".png"));
 		
 		
 	}

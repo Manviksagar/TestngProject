@@ -3,7 +3,9 @@ package com.sag.base;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.sag.utility.BrowserInit;
@@ -21,6 +23,7 @@ public class BaseClass extends BrowserInit {
 		
 		System.out.println("Builds installed sucessfully.....!");
 	}
+	
 	
 	@AfterTest
 	public void teardown() {

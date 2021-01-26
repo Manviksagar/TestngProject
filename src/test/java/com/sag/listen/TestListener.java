@@ -37,7 +37,8 @@ public class TestListener implements ITestListener{
 
 	public void onTestFailure(ITestResult result) {
 		String tc_name =result.getName();
-		System.out.println("On test Sucess "+ result.getName());
+		System.out.println("On test failure "+ result.getName());
+		System.out.println(BrowserInit.getDriver());
 		
 			try {
 				Screenshot.CaptureScreenshot(BrowserInit.getDriver(), tc_name);

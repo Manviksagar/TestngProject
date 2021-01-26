@@ -26,7 +26,8 @@ public class BrowserInit {
 
 	public WebDriver initialize_driver() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Va185060\\OneDrive - NCR Corporation\\Desktop\\sag\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Va185060\\OneDrive - NCR Corporation\\Desktop\\sag\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();

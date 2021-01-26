@@ -1,17 +1,37 @@
 package com.sag.pos;
 
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.sag.base.BaseClass;
+import com.sag.utility.BrowserInit;
 
-public class PostTest extends BaseClass {
-	
-	
+public class PostTest {
+
+	WebDriver driver;
+
+	@BeforeTest
+	public void setup() {
+		driver = BrowserInit.getDriver();
+	}
+
 	@Test
 	public void sale() {
-		driver.get("https://www.google.com/");
-		
+
+		System.out.println(driver);
+
+		driver.get("https://www.facebook.com/");
+
 		System.out.println("Sale testing started");
+	}
+
+	@Test
+	public void returnpos() {
+
+		driver.get("https://www.facebook.com/");
+
+		Assert.assertTrue(false);
 	}
 
 }
