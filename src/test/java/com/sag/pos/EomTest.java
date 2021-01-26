@@ -1,21 +1,31 @@
 package com.sag.pos;
 
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class EomTest {
+import com.sag.base.BaseClass;
+import com.sag.utility.Screenshot;
+
+public class EomTest extends BaseClass {
 	
-	@BeforeTest
-	public void installation() {
-		
-		System.out.println("Builds installed sucessfully.....!");
-	}
-	
-	
+
+	//WebDriver driver;
+	Screenshot shot = new Screenshot();;
+	@Parameters("browser")
 	@Test
-	public void eom() {
+	public void eom(String browser) throws IOException {
+		driver.get("https://www.google.com/");
 		
-		System.out.println("Eom testing started");
+		//shot.CaptureScreenshot(driver);
+		
+		System.out.println("Eom testing started" + browser);
+		
+		System.out.println(System .getProperty("user.dir"));
+		//driver.quit();
 	}
 
 }

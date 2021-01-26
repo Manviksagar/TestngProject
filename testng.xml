@@ -6,6 +6,9 @@
 </listeners>
 
   <test thread-count="5" name="Test">
+  
+  	<parameter name="browser" value ="Chrome" ></parameter>
+  
     <classes>
       <class name="com.sag.pos.EomTest"/>
       <class name="com.sag.pos.PostTest"/>
