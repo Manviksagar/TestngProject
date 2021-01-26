@@ -7,13 +7,11 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.sag.pos.PostTest">
+      <class name="com.sag.dataprovider.TestDataProvider">
         <methods>
-          <include name="sale"/>
-          <include name="installation"/>
-          <include name="teardown"/>
+          <include name="testExceldata"/>
         </methods>
-      </class> <!-- com.sag.pos.PostTest -->
+      </class> <!-- com.sag.dataprovider.TestDataProvider -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
