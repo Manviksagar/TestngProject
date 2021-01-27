@@ -5,7 +5,10 @@
 	<groupId>com.sag.alltest</groupId>
 	<artifactId>CompleteTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<aspectj.version>1.9.2</aspectj.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -47,5 +50,42 @@
 			<version>4.2.2</version>
 			<scope>test</scope>
 		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.13.0</version>
+		</dependency>
 	</dependencies>
+	
+	<build>
+	 <plugins>
+		<!-- Added Surefire Plugin configuration to execute tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<argLine>
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+					</argLine>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>${aspectj.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>	 
+	 
+	 </plugins>
+	
+	</build>
 </project>
